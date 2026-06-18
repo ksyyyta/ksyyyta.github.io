@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ksyyyta — Портфолио дизайнера Ксении Гогиной</title>
+    <meta
+      name="description"
+      content="Портфолио начинающего дизайнера из Ростова-на-Дону. Брендинг, веб-дизайн, постеры и типографика."
+    />
+    <meta
+      name="keywords"
+      content="дизайнер, портфолио, Ростов-на-Дону, брендинг, веб-дизайн, постеры, типографика, Ксения Гогина, Ksyyyta"
+    />
+    <meta name="theme-color" content="#F96C9F" />
+
+    <!-- Шрифты: Yeasty Flavors для логотипа, Inter для основного текста -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Yeasty+Flavors&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Стили вынесены в отдельный CSS-файл -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="portfolio">
+    <!-- Переключатель темы (чистый CSS, без JS) -->
+    <input type="checkbox" id="theme-switch" class="portfolio__theme-input" />
+
+    <!-- Скрытые radio-кнопки фильтра (чистый CSS, без JS) -->
+    <input type="radio" name="filter" id="filter-all" class="portfolio__filter-input" checked />
+    <input type="radio" name="filter" id="filter-branding" class="portfolio__filter-input" />
+    <input type="radio" name="filter" id="filter-web" class="portfolio__filter-input" />
+    <input type="radio" name="filter" id="filter-posters" class="portfolio__filter-input" />
+    <input type="radio" name="filter" id="filter-typography" class="portfolio__filter-input" />
+
+    <!-- Шапка сайта с навигацией -->
+    <header class="portfolio__header">
+      <nav class="portfolio__nav">
+        <a href="#hero" class="portfolio__logo">Ksyyyta</a>
+
+        <ul class="portfolio__menu">
+          <li><a href="#hero" class="portfolio__menu-link">Обо мне</a></li>
+          <li><a href="#projects" class="portfolio__menu-link">Работы</a></li>
+          <li><a href="#contact" class="portfolio__menu-link">Контакты</a></li>
+        </ul>
+
+        <label for="theme-switch" class="portfolio__theme-toggle" title="Переключить тему">
+          <span class="sr-only">Переключить тему</span>
+          <span class="portfolio__theme-icon portfolio__theme-icon--moon" aria-hidden="true">🌙</span>
+          <span class="portfolio__theme-icon portfolio__theme-icon--sun" aria-hidden="true">☀️</span>
+        </label>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero / Обо мне -->
+      <section class="portfolio__hero" id="hero">
+        <div class="container">
+          <div class="portfolio__hero-image">
+            <img
+              src="images/c6322b9a-d185-4b7f-a597-9667d556a81a-rwc-103x0x2936x410x3200.png"
+              alt="Ксения Гогина — дизайнер"
+            />
+          </div>
+
+          <div class="portfolio__hero-text">
+            <p class="portfolio__greeting">
+              привет! я Ксюша, начинающий дизайнер, 17 лет, живу в Ростове-на-Дону
+            </p>
+
+            <div class="portfolio__cta">
+              <a
+                class="portfolio__order-button"
+                href="https://www.instagram.com/ksyyytagogina?igsh=NWJpcGs5ZGN2OW10&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Заказать дизайн
+              </a>
+            </div>
+
+            <div class="portfolio__social">
+              <a
+                class="portfolio__social-link"
+                href="https://t.me/ksyyyta"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Telegram
+              </a>
+              <a
+                class="portfolio__social-link"
+                href="https://www.behance.net/kseniagogina"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Behance
+              </a>
+              <a
+                class="portfolio__social-link"
+                href="https://www.instagram.com/ksyyytagogina?igsh=NWJpcGs5ZGN2OW10&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Работы -->
+      <section class="portfolio__projects" id="projects">
+        <div class="container">
+          <h2 class="portfolio__section-title">Мои работы</h2>
+
+          <!-- Фильтр по категориям (label'ы управляют скрытыми radio выше) -->
+          <div class="portfolio__filter">
+            <label for="filter-all" class="portfolio__filter-button">Все</label>
+            <label for="filter-branding" class="portfolio__filter-button">Брендинг</label>
+            <label for="filter-web" class="portfolio__filter-button">Веб-дизайн</label>
+            <label for="filter-posters" class="portfolio__filter-button">Постеры</label>
+            <label for="filter-typography" class="portfolio__filter-button">Типографика</label>
+          </div>
+
+          <!-- Сетка проектов -->
+          <div class="portfolio__grid">
+            <!-- МИСО — брендинг -->
+            <a href="#project-miso" class="portfolio__project-card" data-category="branding">
+              <span class="portfolio__project-image">
+                <img src="works/miso-branding.png" alt="МИСО — брендинг" />
+              </span>
+              <span class="portfolio__project-info">
+                <span class="portfolio__project-title">МИСО — брендинг</span>
+                <span class="portfolio__project-category">Брендинг</span>
+              </span>
+            </a>
+
+            <!-- Cloud Cream — логотип -->
+            <a href="#project-cloud" class="portfolio__project-card" data-category="branding">
+              <span class="portfolio__project-image">
+                <img src="works/cloud-cream-logo.png" alt="Cloud Cream — логотип" />
+              </span>
+              <span class="portfolio__project-info">
+                <span class="portfolio__project-title">Cloud Cream — логотип</span>
+                <span class="portfolio__project-category">Брендинг</span>
+              </span>
+            </a>
+
+            <!-- britmet — онлайн-школа -->
+            <a href="#project-britmet" class="portfolio__project-card" data-category="web">
+              <span class="portfolio__project-image">
+                <img src="works/britmet-1.png" alt="britmet — онлайн-школа" />
+                <span class="portfolio__project-count">3 фото</span>
+              </span>
+              <span class="portfolio__project-info">
+                <span class="portfolio__project-title">britmet — онлайн-школа</span>
+                <span class="portfolio__project-category">Веб-дизайн</span>
+              </span>
+            </a>
+
+            <!-- Matcha — серия постеров -->
+            <a href="#project-matcha" class="portfolio__project-card" data-category="posters">
+              <span class="portfolio__project-image">
+                <img src="works/matcha.png" alt="Matcha — серия постеров" />
+                <span class="portfolio__project-count">4 фото</span>
+              </span>
+              <span class="portfolio__project-info">
+                <span class="portfolio__project-title">Matcha — серия постеров</span>
+                <span class="portfolio__project-category">Постеры</span>
+              </span>
+            </a>
+
+            <!-- Season Coffee — постер -->
+            <a href="#project-coffee" class="portfolio__project-card" data-category="posters">
+              <span class="portfolio__project-image">
+                <img src="works/poster2.png" alt="Season Coffee — постер" />
+              </span>
+              <span class="portfolio__project-info">
+                <span class="portfolio__project-title">Season Coffee — постер</span>
+                <span class="portfolio__project-category">Постеры</span>
+              </span>
+            </a>
+
+            <!-- Clayful — типографика -->
+            <a href="#project-clayful" class="portfolio__project-card" data-category="typography">
+              <span class="portfolio__project-image">
+                <img src="works/typography-text.jpg" alt="Clayful — типографика" />
+              </span>
+              <span class="portfolio__project-info">
+                <span class="portfolio__project-title">Clayful — типографика</span>
+                <span class="portfolio__project-category">Типографика</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Контакты / Форма обратной связи -->
+      <section class="portfolio__contact" id="contact">
+        <div class="container">
+          <h2 class="portfolio__section-title">Свяжитесь со мной</h2>
+          <p class="portfolio__contact-subtitle">Готова обсудить ваш проект и воплотить идеи в жизнь</p>
+
+          <!-- Рабочая форма через mailto (без JS) -->
+          <form class="portfolio__form" action="mailto:ksyyyta@example.com" method="post" enctype="text/plain">
+            <div class="portfolio__form-group">
+              <label for="name" class="sr-only">Имя</label>
+              <input class="portfolio__form-input" type="text" id="name" name="name" placeholder="Ваше имя" required />
+            </div>
+
+            <div class="portfolio__form-group">
+              <label for="email" class="sr-only">Email</label>
+              <input
+                class="portfolio__form-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Ваш email"
+                required
+              />
+            </div>
+
+            <div class="portfolio__form-group">
+              <label for="message" class="sr-only">Сообщение</label>
+              <textarea
+                class="portfolio__form-textarea"
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Расскажите о вашем проекте"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="portfolio__form-submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="portfolio__footer">
+      <div class="container">
+        <p class="portfolio__footer-text">© 2026 Ксения Гогина (Ksyyyta). Все права защищены.</p>
+        <p class="portfolio__footer-domain">ksyyytaportfolio</p>
+      </div>
+    </footer>
+
+    <!-- ===== Лайтбоксы галерей (открываются через :target, без JS) ===== -->
+
+    <!-- МИСО -->
+    <div class="portfolio__lightbox" id="project-miso">
+      <a href="#projects" class="portfolio__lightbox-backdrop" aria-label="Закрыть"></a>
+      <div class="portfolio__lightbox-content">
+        <div class="portfolio__lightbox-header">
+          <h3 class="portfolio__lightbox-title">МИСО — брендинг</h3>
+          <a href="#projects" class="portfolio__lightbox-close" aria-label="Закрыть">✕</a>
+        </div>
+        <div class="portfolio__lightbox-gallery">
+          <img class="portfolio__lightbox-image" src="works/miso-branding.png" alt="МИСО — брендинг" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Cloud Cream -->
+    <div class="portfolio__lightbox" id="project-cloud">
+      <a href="#projects" class="portfolio__lightbox-backdrop" aria-label="Закрыть"></a>
+      <div class="portfolio__lightbox-content">
+        <div class="portfolio__lightbox-header">
+          <h3 class="portfolio__lightbox-title">Cloud Cream — логотип</h3>
+          <a href="#projects" class="portfolio__lightbox-close" aria-label="Закрыть">✕</a>
+        </div>
+        <div class="portfolio__lightbox-gallery">
+          <img class="portfolio__lightbox-image" src="works/cloud-cream-logo.png" alt="Cloud Cream — логотип" />
+        </div>
+      </div>
+    </div>
+
+    <!-- britmet -->
+    <div class="portfolio__lightbox" id="project-britmet">
+      <a href="#projects" class="portfolio__lightbox-backdrop" aria-label="Закрыть"></a>
+      <div class="portfolio__lightbox-content">
+        <div class="portfolio__lightbox-header">
+          <h3 class="portfolio__lightbox-title">britmet — онлайн-школа</h3>
+          <a href="#projects" class="portfolio__lightbox-close" aria-label="Закрыть">✕</a>
+        </div>
+        <div class="portfolio__lightbox-gallery">
+          <img class="portfolio__lightbox-image" src="works/britmet-1.png" alt="britmet — главный экран" />
+          <img class="portfolio__lightbox-image" src="works/britmet-2.png" alt="britmet — почему с нами" />
+          <img class="portfolio__lightbox-image" src="works/britmet-3.png" alt="britmet — стоимость и тарифы" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Matcha -->
+    <div class="portfolio__lightbox" id="project-matcha">
+      <a href="#projects" class="portfolio__lightbox-backdrop" aria-label="Закрыть"></a>
+      <div class="portfolio__lightbox-content">
+        <div class="portfolio__lightbox-header">
+          <h3 class="portfolio__lightbox-title">Matcha — серия постеров</h3>
+          <a href="#projects" class="portfolio__lightbox-close" aria-label="Закрыть">✕</a>
+        </div>
+        <div class="portfolio__lightbox-gallery">
+          <img class="portfolio__lightbox-image" src="works/matcha.png" alt="Matcha — постер 1" />
+          <img class="portfolio__lightbox-image" src="works/matcha1.png" alt="Matcha — постер 2" />
+          <img class="portfolio__lightbox-image" src="works/matcha2.png" alt="Matcha — постер 3" />
+          <img class="portfolio__lightbox-image" src="works/matcha3.png" alt="Matcha — постер 4" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Season Coffee -->
+    <div class="portfolio__lightbox" id="project-coffee">
+      <a href="#projects" class="portfolio__lightbox-backdrop" aria-label="Закрыть"></a>
+      <div class="portfolio__lightbox-content">
+        <div class="portfolio__lightbox-header">
+          <h3 class="portfolio__lightbox-title">Season Coffee — постер</h3>
+          <a href="#projects" class="portfolio__lightbox-close" aria-label="Закрыть">✕</a>
+        </div>
+        <div class="portfolio__lightbox-gallery">
+          <img class="portfolio__lightbox-image" src="works/poster2.png" alt="Season Coffee — постер" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Clayful -->
+    <div class="portfolio__lightbox" id="project-clayful">
+      <a href="#projects" class="portfolio__lightbox-backdrop" aria-label="Закрыть"></a>
+      <div class="portfolio__lightbox-content">
+        <div class="portfolio__lightbox-header">
+          <h3 class="portfolio__lightbox-title">Clayful — типографика</h3>
+          <a href="#projects" class="portfolio__lightbox-close" aria-label="Закрыть">✕</a>
+        </div>
+        <div class="portfolio__lightbox-gallery">
+          <img class="portfolio__lightbox-image" src="works/typography-text.jpg" alt="Clayful — типографика" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
